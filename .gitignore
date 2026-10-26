@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.npy
+*.pkl
+data/raw_pdfs/
+data/processed/
+data/cache/
