@@ -26,6 +26,8 @@ Known limitations: tables flattened (flagged), footnotes, page range per clause.
 
 ## Step 4: Relationship ground truth
 
-17 relations across 17/20 documents (supersedes 11, amends 6, withdraws 0). Evidence: 17 pdf_text, 0 rbi_web.
+20 relations across 20/20 documents (supersedes 11, amends 6, withdraws 1).
 
-found_by: 17 manual, 0 finder. Status derived by rule from relations (not hand-labeled).
+Evidence: 20 pdf_text, 0 rbi_web.
+
+found_by: 20 manual, 0 finder. Status derived by rule from relations (not hand-labeled).

@@ -211,7 +211,7 @@ def load_pages(pdf_path, parser="pymupdf", max_pages=None):
         import fitz
         with fitz.open(pdf_path) as doc:
             n = len(doc) if max_pages is None else min(max_pages, len(doc))
-            return [doc[i].get_text("text", sort=True) for i in range(n)]
+            return [doc[i].get_text("text") for i in range(n)]
     if parser == "pdfplumber":
         import pdfplumber
         with pdfplumber.open(pdf_path) as pdf:
