@@ -21,5 +21,5 @@ show a clear table-quality advantage for pdfplumber. No fallback enabled.
 
 ## Step 3: Clause-aware chunker
 
-Cunks: 533 acroshs 20 files (median words pending; 2 files failed processing). Manual review (10 chunks): 8/10 boundary_ok, 10/10 page_ok.
+Cunks: 533 across 20 files (median words pending; 2 files failed processing). Manual review (10 chunks): 8/10 boundary_ok, 10/10 page_ok.
 Known limitations: tables flattened (flagged), footnotes, page range per clause.
