@@ -1,3 +1,4 @@
+
 """Step 3: raw PDFs -> clause-aware chunks (JSONL) + stats + manual-review sample."""
 import argparse
 import csv
@@ -26,10 +27,10 @@ def read_sources():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--parser", default="pymupdf", choices=["pymupdf", "pdfplumber"])
-    ap.add_argument("--only", default="", help="filename mein ye text ho to hi chalao")
+    ap.add_argument("--only", default="", help="Run only on files whose names contain this text")
     ap.add_argument("--min-words", type=int, default=40)
     ap.add_argument("--max-words", type=int, default=350)
-    ap.add_argument("--show", type=int, default=10, help="review ke liye random chunks")
+    ap.add_argument("--show", type=int, default=10, help="Random chunks for review")
     ap.add_argument("--seed", type=int, default=7)
     args = ap.parse_args()
 
@@ -40,7 +41,7 @@ def main():
 
     pdfs = [p for p in sorted(RAW.glob("*.pdf")) if args.only in p.name]
     if not pdfs:
-        print("Koi PDF nahi mili.")
+        print("No PDFs found.")
         return
 
     all_chunks, rows = [], []
@@ -86,7 +87,7 @@ def main():
     print(f"\nTOTAL: {len(good)} files, {sum(r['chunks'] for r in good)} chunks, "
           f"errors: {len(rows) - len(good)}")
 
-    # ---- manual review sample ----
+    # ---- Manual review sample ----
     if args.show and all_chunks:
         rnd = random.Random(args.seed)
         pick = rnd.sample(all_chunks, min(args.show, len(all_chunks)))

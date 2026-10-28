@@ -1,3 +1,4 @@
+
 """Step 2: PyMuPDF vs pdfplumber comparison on data/raw_pdfs."""
 import argparse
 import csv
@@ -13,9 +14,9 @@ RAW = Path("data/raw_pdfs")
 DUMP = Path("data/processed/parse_compare")
 RESULTS = Path("eval/results/step2_parser_compare.csv")
 
-# numbered clause: "5.2.1 text" ya "12. text"  (sirf saal jaisa "2025 text" match nahi hoga)
+# Numbered clause: "5.2.1 text" or "12. text" (will not match year-like text such as "2025 text")
 CLAUSE = re.compile(r"^\s*(?:\d{1,3}(?:\.\d{1,3})+\.?|\d{1,3}\.)\s+\S")
-# sub-clause: "(a) text", "(ii) text", "(3) text"
+# Sub-clause: "(a) text", "(ii) text", "(3) text"
 SUBCLAUSE = re.compile(r"^\s*\((?:[a-z]{1,3}|[ivx]{1,5}|\d{1,2})\)\s+\S")
 
 
@@ -61,7 +62,7 @@ def stats(texts):
         for l in set(ls):
             if 5 <= len(l) <= 120:
                 seen[l] += 1
-    # header/footer proxy: line jo >= 50% pages par repeat hoti hai
+    # Header/footer proxy: a line that repeats on at least 50% of pages
     repeated = sum(1 for c in seen.values() if n_pages >= 4 and c >= n_pages * 0.5)
     short = sum(1 for l in all_lines if len(l.split()) <= 3)
     return {
@@ -96,8 +97,8 @@ def selftest():
     sample = ["5.2.1 The bank shall comply.\n(a) first item\n(ii) second item\n"
               "2025 Directions apply.\n12. Definitions\n"]
     s = stats(sample)
-    assert s["clause_lines"] == 2, s      # "5.2.1 ..." aur "12. ..."
-    assert s["subclause_lines"] == 2, s   # "(a)" aur "(ii)"
+    assert s["clause_lines"] == 2, s      # "5.2.1 ..." and "12. ..."
+    assert s["subclause_lines"] == 2, s   # "(a)" and "(ii)"
     assert overlap_pct(["a b c"], ["b c d"]) == 50.0
     print("selftest OK")
 
@@ -105,7 +106,7 @@ def selftest():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-pages", type=int, default=30)
-    ap.add_argument("--only", default="", help="filename mein ye text ho to hi chalao")
+    ap.add_argument("--only", default="", help="Run only on files whose names contain this text")
     ap.add_argument("--selftest", action="store_true")
     args = ap.parse_args()
     if args.selftest:
@@ -115,7 +116,7 @@ def main():
     RESULTS.parent.mkdir(parents=True, exist_ok=True)
     pdfs = [p for p in sorted(RAW.glob("*.pdf")) if args.only in p.name]
     if not pdfs:
-        print("Koi PDF nahi mili.")
+        print("No PDFs found.")
         return
 
     fields = ["file", "parser", "pages", "text_s", "tables_s", "tables", "chars",

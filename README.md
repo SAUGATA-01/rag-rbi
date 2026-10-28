@@ -23,3 +23,9 @@ show a clear table-quality advantage for pdfplumber. No fallback enabled.
 
 Cunks: 533 across 20 files (median words pending; 2 files failed processing). Manual review (10 chunks): 8/10 boundary_ok, 10/10 page_ok.
 Known limitations: tables flattened (flagged), footnotes, page range per clause.
+
+## Step 4: Relationship ground truth
+
+17 relations across 17/20 documents (supersedes 11, amends 6, withdraws 0). Evidence: 17 pdf_text, 0 rbi_web.
+
+found_by: 17 manual, 0 finder. Status derived by rule from relations (not hand-labeled).

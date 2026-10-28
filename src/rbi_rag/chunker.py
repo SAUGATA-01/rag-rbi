@@ -1,3 +1,4 @@
+
 """Clause-aware chunker for RBI PDFs (Step 3). Pure Python, no ML libraries.
 
 Pipeline: page texts -> clean (header/footer/page-no) -> segments (heading + numbered
@@ -12,9 +13,9 @@ from dataclasses import dataclass
 
 @dataclass
 class ChunkConfig:
-    min_words: int = 40          # isse chhota segment agle segment mein merge hoga
-    max_words: int = 350         # isse bada segment sub-clause / sentence par split hoga
-    repeat_ratio: float = 0.5    # line itne % pages par aaye to header/footer maano
+    min_words: int = 40          # segments shorter than this will be merged into the next segment
+    max_words: int = 350         # segments longer than this will be split at sub-clause / sentence boundaries
+    repeat_ratio: float = 0.5    # if a line appears on this percentage of pages, treat it as a header/footer
     min_pages_for_repeat: int = 4
 
 
@@ -23,7 +24,7 @@ class ChunkConfig:
 PAGE_NO = re.compile(
     r"^\s*(?:page\s+)?\d{1,3}(?:\s*(?:of|/)\s*\d{1,3})?\s*$|^\s*-\s*\d{1,3}\s*-\s*$", re.I
 )
-# numbered clause: "5.2.1 Text" ya "12. Text" ("25 June 2025" jaisi date clause nahi maani jaati)
+# numbered clause: "5.2.1 Text" or "12. Text" (dates such as "25 June 2025" are not treated as clauses)
 CLAUSE_START = re.compile(r"^(?:(\d{1,3}(?:\.\d{1,3})+)\.?|(\d{1,3})\.)\s+(?=[A-Z(\[\"'\u201c\u2018])")
 # sub-clause: "(a) text", "(ii) text", "(3) text"
 SUBCLAUSE = re.compile(r"^\((?:[a-z]{1,3}|[ivx]{1,5}|\d{1,2})\)\s+\S")
@@ -39,7 +40,7 @@ class Segment:
     text: str
     page_start: int
     page_end: int
-    n_lines: int = 0   # raw lines (table-fragment detection ke liye)
+    n_lines: int = 0   # raw lines (for table-fragment detection)
     n_short: int = 0   # raw lines with <= 3 words
 
 
@@ -123,7 +124,7 @@ def merge_small(segs, cfg: ChunkConfig):
     out, carry = [], None
     for s in segs:
         if carry is not None:
-            if carry.heading == s.heading:       # heading ke bahar merge nahi
+            if carry.heading == s.heading:       # do not merge across headings
                 s = _join(carry, s)
             else:
                 out.append(carry)
@@ -160,12 +161,12 @@ def split_big(seg: Segment, cfg: ChunkConfig):
         return [seg]
     units = []
     for line in seg.text.split("\n"):
-        if wc(line) > cfg.max_words:             # sub-clause bhi bada: sentence par todo
+        if wc(line) > cfg.max_words:             # if the sub-clause is also too long, split at sentence boundaries
             units += [u for u in re.split(r"(?<=[.;:])\s+", line) if u]
         else:
             units.append(line)
     parts = pack(units, cfg.max_words)
-    if len(parts) > 1 and wc(parts[-1]) < cfg.min_words // 2:   # chhoti dum mat chhodo
+    if len(parts) > 1 and wc(parts[-1]) < cfg.min_words // 2:   # do not leave a short tail
         parts[-2] = parts[-2] + "\n" + parts.pop()
     return [Segment(seg.heading, seg.clause_ids, p, seg.page_start, seg.page_end,
                     seg.n_lines, seg.n_short) for p in parts]

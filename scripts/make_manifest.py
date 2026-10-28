@@ -1,3 +1,4 @@
+
 """Step 1: data/raw_pdfs scan -> manifest.csv (technical) + sources.csv (manual metadata)."""
 import csv
 from pathlib import Path
@@ -8,12 +9,12 @@ RAW = Path("data/raw_pdfs")
 META = Path("data/metadata")
 MANIFEST = META / "manifest.csv"
 SOURCES = META / "sources.csv"
-OLD_DOCS = META / "documents.csv"  # pichle Step 1 version ki file (agar bani ho)
+OLD_DOCS = META / "documents.csv"  # File from the previous Step 1 version (if it exists)
 
 MANIFEST_FIELDS = ["file", "size_kb", "pages", "chars_first3", "text_ok", "error"]
 SOURCE_FIELDS = ["file", "title", "rbi_url", "year", "type", "circular_no", "date"]
 REQUIRED = ["title", "rbi_url", "year", "type", "circular_no", "date"]
-# purani documents.csv ke columns -> sources.csv ke columns
+# Old documents.csv columns -> sources.csv columns
 OLD_MAP = {"title": "title", "source_url": "rbi_url", "doc_type": "type",
            "circular_no": "circular_no", "issue_date": "date"}
 
@@ -58,7 +59,7 @@ def main():
     META.mkdir(parents=True, exist_ok=True)
     pdfs = sorted(RAW.glob("*.pdf"))
     if not pdfs:
-        print(f"{RAW} mein koi PDF nahi mili. Pehle PDFs download karo.")
+        print(f"No PDFs found in {RAW}. Download the PDFs first.")
         return
 
     manifest = [inspect(p) for p in pdfs]
@@ -81,7 +82,7 @@ def main():
 
     names = {p.name for p in pdfs}
     orphans = [f for f in existing if f not in names]
-    for f in orphans:  # manual kaam mat khona
+    for f in orphans:  # Do not lose manually entered data
         rows.append({k: existing[f].get(k, "") for k in SOURCE_FIELDS})
     write_csv(SOURCES, SOURCE_FIELDS, rows)
 
@@ -89,12 +90,12 @@ def main():
     bad = [r["file"] for r in manifest if not r["text_ok"]]
     incomplete = [r["file"] for r in rows if any(not r[k] for k in REQUIRED)]
 
-    print(f"PDFs: {len(manifest)} | text_ok: {ok} | problem: {len(bad)}")
+    print(f"PDFs: {len(manifest)} | text_ok: {ok} | problems: {len(bad)}")
     print(f"sources.csv: {len(rows)} rows | complete: {len(rows) - len(incomplete)} | incomplete: {len(incomplete)}")
     for b in bad:
-        print("  [text problem]", b)
+        print("  [Text problem]", b)
     for o in orphans:
-        print("  [sources.csv mein hai par PDF nahi mili]", o)
+        print("  [Listed in sources.csv but PDF not found]", o)
     print(f"Files: {MANIFEST} , {SOURCES}")
 
 

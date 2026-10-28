@@ -1,3 +1,4 @@
+
 import unittest
 
 from rbi_rag.chunker import ChunkConfig, chunk_pages, clean_pages
@@ -38,7 +39,7 @@ class ChunkerTests(unittest.TestCase):
     def test_date_line_is_not_a_clause(self):
         ch = chunk_pages(PAGES, "t", cfg=CFG)
         self.assertNotIn("25", [c["clause_ids"] for c in ch])
-        self.assertIn("25 June 2025 is the effective date", ch[3]["text"])  # clause 4 ke andar
+        self.assertIn("25 June 2025 is the effective date", ch[3]["text"])  # inside clause 4
 
     def test_subclauses_stay_inside_parent(self):
         ch = chunk_pages(PAGES, "t", cfg=CFG)
@@ -53,7 +54,7 @@ class ChunkerTests(unittest.TestCase):
         self.assertGreater(len(ch), 1)
         self.assertTrue(all(c["n_words"] <= 30 for c in ch))
         self.assertTrue(all(c["clause_ids"] == "7" for c in ch))
-        self.assertTrue(all(c["text"].startswith("(") for c in ch[1:]))  # sub-clause boundary par kata
+        self.assertTrue(all(c["text"].startswith("(") for c in ch[1:]))  # split at sub-clause boundaries
 
     def test_merge_small_within_heading(self):
         page = ("Chapter I \u2013 Test\n8. Scope\n9. Applicability of these rules to banks and others here\n"
