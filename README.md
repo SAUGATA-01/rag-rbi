@@ -31,3 +31,9 @@ Known limitations: tables flattened (flagged), footnotes, page range per clause.
 Evidence: 20 pdf_text, 0 rbi_web.
 
 found_by: 20 manual, 0 finder. Status derived by rule from relations (not hand-labeled).
+
+## Step 5: Corpus (50 documents)
+
+50 docs, 2529 chunks, corpus_sha=ecd4be274dc8. Types: MD 20, AMD 12, CIR 18. Status: active 48, superseded 2.
+
+Old+new pairs in corpus: 2; amendments with base in corpus: 3. Flagged for review: 14 (see eval/results/step5_ingest_report.csv).

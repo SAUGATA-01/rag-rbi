@@ -7,6 +7,7 @@ The candidate finder is only a labeling aid, not an extraction tool.
 from __future__ import annotations
 
 import re
+import unicodedata
 
 REL_FIELDS = ["src_file", "relation", "dst_file", "dst_ref", "evidence_source",
               "evidence_page", "evidence_quote", "found_by", "notes"]
@@ -15,11 +16,18 @@ VALID_EVID = {"pdf_text", "rbi_web"}
 VALID_FOUND = {"manual", "finder"}
 
 
+
 def norm(s: str) -> str:
-    """Normalize hyphenated line breaks, case, punctuation, and whitespace for quote matching."""
+    """Normalize hyphenated line breaks, Unicode text, punctuation, and whitespace."""
     s = re.sub(r"-\s*\n\s*", "", s or "")
-    s = re.sub(r"[^a-z0-9\s]", "", s.lower())
+    s = unicodedata.normalize("NFC", s).casefold()
+    s = "".join(
+        ch for ch in s
+        if unicodedata.category(ch)[0] != "P"
+    )
     return re.sub(r"\s+", " ", s).strip()
+
+
 
 
 # ---------------- validation ----------------

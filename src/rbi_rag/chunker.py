@@ -167,7 +167,8 @@ def split_big(seg: Segment, cfg: ChunkConfig):
             units.append(line)
     parts = pack(units, cfg.max_words)
     if len(parts) > 1 and wc(parts[-1]) < cfg.min_words // 2:   # do not leave a short tail
-        parts[-2] = parts[-2] + "\n" + parts.pop()
+        tail = parts.pop()
+        parts[-1] = parts[-1] + "\n" + tail
     return [Segment(seg.heading, seg.clause_ids, p, seg.page_start, seg.page_end,
                     seg.n_lines, seg.n_short) for p in parts]
 
