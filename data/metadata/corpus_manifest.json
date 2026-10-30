@@ -1,7 +1,7 @@
 {
-  "created_utc": "2026-10-29T18:40:31+00:00",
+  "created_utc": "2026-10-29T21:56:44+00:00",
   "n_docs": 50,
-  "n_chunks": 2529,
+  "n_chunks": 2564,
   "parser": "pymupdf",
   "chunk_config": {
     "min_words": 40,
@@ -9,8 +9,8 @@
     "repeat_ratio": 0.5,
     "min_pages_for_repeat": 4
   },
-  "chunker_sha": "5f149ecdeceb",
+  "chunker_sha": "07e88312094a",
   "sources_sha": "bae0e1f2e3c5",
-  "status_sha": "7bc3bbfb8f42",
-  "corpus_sha": "ecd4be274dc8"
+  "status_sha": "309ed7e016c1",
+  "corpus_sha": "c6be8a2ed75e"
 }

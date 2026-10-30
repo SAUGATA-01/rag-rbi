@@ -13,8 +13,8 @@ AMD_kyc_2025.pdf,AMD,active,2,3,112,33.3,0.0,0.0,
 AMD_responsiblebusinessconduct_2026.pdf,AMD,active,11,13,319,7.7,0.0,0.0,huge_chunks
 CIR_capitaladequacy_2024.pdf,CIR,active,37,99,81,17.2,6.1,0.0,
 CIR_capitaladequacy_2026.pdf,CIR,active,2,3,46,66.7,0.0,0.0,many_noclause
-CIR_creditfacilities_2026.pdf,CIR,active,20,17,328,35.3,0.0,0.0,huge_chunks
-CIR_creditinformationreporting_2025.pdf,CIR,active,101,141,161,53.2,41.8,0.0,many_noclause|many_tables
+CIR_creditfacilities_2026.pdf,CIR,superseded,20,17,328,35.3,0.0,0.0,huge_chunks
+CIR_creditinformationreporting_2025.pdf,CIR,active,101,151,131,60.3,33.8,0.0,many_noclause|many_tables
 CIR_crr_2024.pdf,CIR,active,2,4,97,50.0,25.0,0.0,
 CIR_crr_2025.pdf,CIR,active,2,4,98,50.0,25.0,0.0,
 CIR_financialstatementsdisclosures_2026.pdf,CIR,active,3,6,68,33.3,0.0,0.0,
@@ -33,8 +33,8 @@ MD_bharatbillpaymentsystem_2024.pdf,MD,active,6,13,110,15.4,7.7,0.0,
 MD_capitaladequacy_2026.pdf,MD,active,412,614,201,11.6,4.4,0.0,
 MD_creditderiv_2022.pdf,MD,superseded,14,27,124,11.1,3.7,0.0,
 MD_creditderiv_2026.pdf,MD,active,19,33,177,6.1,3.0,0.0,
-MD_creditfacilities_2025.pdf,MD,active,153,369,84,10.3,1.1,0.0,
-MD_creditreporting_2025.pdf,MD,active,67,117,85,46.2,35.0,0.0,many_tables
+MD_creditfacilities_2025.pdf,MD,active,153,373,84,11.5,0.8,0.0,
+MD_creditreporting_2025.pdf,MD,active,67,120,77,47.5,34.2,0.0,many_tables
 MD_creditrisk_2025.pdf,MD,active,53,72,125,44.4,4.2,0.0,
 MD_creditrisk_2026.pdf,MD,active,85,140,176,27.1,7.9,0.0,
 MD_cyberresilience&nonbankPSO_2024.pdf,MD,active,16,34,118,26.5,8.8,0.0,
@@ -44,8 +44,8 @@ MD_digitalpaymentsecurity_2026.pdf,MD,active,32,56,97,10.7,1.8,0.0,
 MD_fraudrisk_2026.pdf,MD,active,26,59,71,13.6,3.4,0.0,
 MD_itgovernance_2023.pdf,MD,active,26,44,105,15.9,9.1,0.0,
 MD_kcc_2026.pdf,MD,active,23,43,74,23.3,16.3,0.0,
-MD_marketriskcapital_2026.pdf,MD,active,49,55,332,25.5,3.6,0.0,huge_chunks
-MD_paymentaggregator_2025.pdf,MD,active,26,54,73,13.0,11.1,0.0,
+MD_marketriskcapital_2026.pdf,MD,active,49,56,319,30.4,3.6,0.0,huge_chunks
+MD_paymentaggregator_2025.pdf,MD,active,26,55,73,14.5,10.9,0.0,
 MD_ppi_2026.pdf,MD,active,18,27,140,7.4,0.0,0.0,
-MD_psl_2020.pdf,MD,superseded,43,86,98,31.4,29.1,0.0,
-MD_psl_2025.pdf,MD,active,53,83,108,21.7,20.5,0.0,
+MD_psl_2020.pdf,MD,superseded,43,89,90,33.7,28.1,0.0,
+MD_psl_2025.pdf,MD,active,53,96,99,36.5,25.0,0.0,

@@ -1,0 +1,11 @@
+cffi-2.1.1.dist-info
+charset_normalizer-3.5.2.dist-info
+cryptography-50.0.2.dist-info
+pdfminer_six-20260107.dist-info
+pdfplumber-0.11.10.dist-info
+pillow-13.0.0.dist-info
+pip-26.2.2.dist-info
+pycparser-3.12.dist-info
+pymupdf-1.28.2.dist-info
+pypdfium2-5.14.0.dist-info
+rbi_rag-0.1.0.dist-info

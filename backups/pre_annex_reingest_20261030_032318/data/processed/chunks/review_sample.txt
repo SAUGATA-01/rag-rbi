@@ -1,0 +1,133 @@
+##### 1. MD_itgovernance_2023::0029
+file: MD_itgovernance_2023.pdf | pages 14-14 | clause: 16 | words: 141 | table_flag: False
+heading: Chapter III - IT Infrastructure & Services Management
+
+16. Cryptographic controls The key length, algorithms, cipher suites and applicable protocols used in transmission channels, processing of data and authentication purpose shall be strong. REs shall adopt internationally accepted and published standards that are not deprecated/ demonstrated  to be  insecure/  vulnerable and  the  configurations  involved  in implementing such controls shall be compliant with extant laws and regulatory instructions.            Withdrawn17. Straight Through Processing
+(a)   In order to prevent unauthorised modification of data, REs shall ensure that there is no manual intervention or manual modification in data while  it  is being transferred from one process to another or from one application to another, in respect of critical applications.
+(b)  Data transfer mechanism between processes or applications must be properly tested, securely automated with necessary checks and balances, and properly integrated through “Straight Through Processing” methodology with appropriate authentication mechanism and audit trails.
+
+##### 2. MD_creditderiv_2026::0031
+file: MD_creditderiv_2026.pdf | pages 18-19 | clause: 11 | words: 89 | table_flag: False
+heading: RESERVE BANK OF INDIA FINANCIAL MARKETS REGULATION DEPARTMENT
+
+11. Violation of Directions In the event of any person or agency violating any provision of these Directions or the provisions of any other applicable law, the Reserve Bank may, in addition to taking any penal or regulatory action in accordance with law, disallow that person or agency from dealing in the credit derivatives market for a period not exceeding one month at a time, after providing reasonable opportunity to the person or agency to defend its actions, and such action will be made public by the Reserve Bank.
+
+##### 3. MD_paymentaggregator_2025::0012
+file: MD_paymentaggregator_2025.pdf | pages 3-5 | clause: 4 | words: 322 | table_flag: False
+heading: Chapter I
+
+4.
+Definitions a.
+Cash-on-delivery transaction:
+A merchant transaction wherein banknotes or currency notes, being legal tender in India, is offered or tendered, for and at the time of, delivery of goods and / or service(s).
+b.
+Contact Point Verification (CPV):
+Physical verification of the address or place of business of the merchant.
+c.
+E-commerce:
+Buying and  selling  of goods and  services,  including  digital products, conducted over digital and electronic network.
+Explanation:
+For the purposes of this definition, the term ‘digital & electronic network’ shall include network of computers, television channels and any other internet application used in automated manner such as web pages, extranets, mobiles, etc.
+d.
+Inward transaction:
+Transaction involving the inflow of foreign exchange.
+e.
+Marketplace:
+An e- commerce entity which provides an information technology platform on a digital or electronic network to facilitate transactions between buyer(s) and seller(s).
+f.
+Merchant:
+An entity or a marketplace that sells goods, provides services, or offers investment products, and includes exporters and overseas sellers.
+g.
+Outward transaction:
+Transaction involving the outflow of foreign exchange.
+h.
+Payment channel:
+The method or manner through which payment instruction is initiated and processed in a payment system.
+i.
+Payment Aggregator (PA):
+An entity that facilitates aggregation of payments made by customers to the merchants through one or more payment channels through the merchant’s interface (physical  / virtual) for purchase of goods, services or investment products, and subsequently settles the collected funds to such merchants.
+PA is categorised as below:
+i.
+PA – Physical (PA – P):
+PA that facilitates transaction(s) where both the acceptance device and payment instrument are physically present in close proximity while making the transaction.
+ii.
+PA – Cross Border (PA – CB):
+PA that facilitates aggregation of cross-border payments for current account transactions, that are not prohibited under FEMA,  for  its onboarded merchants through e-commerce mode.
+There are two sub-categories of PA-CB:
+a) PA-CB facilitating inward transaction b) PA-CB facilitating outward transaction Note:
+
+##### 4. CIR_goldmonetization_2015::0016
+file: CIR_goldmonetization_2015.pdf | pages 12-13 | clause: 2.3 | words: 173 | table_flag: False
+heading: CPTC/GMCTA:
+
+2.3 Opening of gold deposit accounts The opening of gold deposit accounts shall be subject to the same rules with regard to customer identification as are applicable to any other deposit account. Depositors who do not already have any other account with the designated bank, shall open a gold deposit account with the designated banks with zero balance at any time prior 22 Inserted vide Circular DBR.IBD.BC.74/23.67.001/2015-16 dated January 21, 2016. 23 Modified vide Circular DBR.IBD.BC.109/23.67.001/2017-18 dated June 7, 2018. to tendering gold at the CPTC/GMCTA after complying with KYC norms as prescribed by Reserve Bank of India. The designated banks will credit the STBD or MLTGD, as the case may be, with the amount of 995 fineness gold as indicated in the advice received from CPTC/GMCTA, after 30 days of receipt of gold at the CPTC/GMCTA, regardless of whether the depositor submits the receipt for issuance of the deposit certificate or not; provided that in case of MLTGD, the deposit receipt issued by CPTC/GMCTA is dated on or before March 25, 2025.
+
+##### 5. CIR_goldmonetization_2015::0041
+file: CIR_goldmonetization_2015.pdf | pages 27-27 | clause: - | words: 50 | table_flag: False
+heading: MTGD           LTGD          MTGD           LTGD
+
+In grams  Value in ₹  In grams  Value in ₹  In grams  Value in ₹  In grams  Value in ₹ 1. 2. 3. Total The value in ₹ may be calculated as per para 2.1.1 (viii) of the MD on GMS, 2015 on the last day of the reporting month.
+
+##### 6. CIR_xbrl_bankingstats_2018::0013
+file: CIR_xbrl_bankingstats_2018.pdf | pages 1-15 | clause: 2 | words: 294 | table_flag: False
+heading: __________________RESERVE BANK OF INDIA _________________
+
+78   Extraordinary    As per accounting standard 5 (AS  5), Extraordinary Items             items are income or expenses that arise from events or transactions that are clearly distinct from the ordinary activities  of  the  enterprise  and,  therefore,  are  not expected to recur frequently or regularly.
+79   Hurdle Rate       Hurdle  rate  is  the minimum  acceptable  return on business activity.
+In the context of rating grades, it refers to the rating grade (on the internal master rating scale of the bank) below which, as per bank’s approved internal policy fresh exposures  to counterparties  will not be undertaken.
+80   Extraordinary    As per accounting standard 5 (AS  5), extraordinary Loss/ Expenses/  charges  are  expenses  that  arise  from  events  or Charges           transactions that are clearly distinct from the ordinary activities  of  the  enterprise  and,  therefore,  are  not expected to recur frequently or transactions that are clearly  distinct  from  the  ordinary  activities  of  the enterprise and, therefore, are not expected  to recur frequently or regularly.
+81   Diluted Earnings   Diluted earnings per share is calculated by assuming that everyone who has an  instrument  that can be converted into an equity share, converts it into an equity share and so the total number of outstanding shares of the company increases, thereby reducing the EPS.
+For details, please refer to accounting standard 20 (AS 20).
+82   Basic   Earnings  Basic earnings per share is the net profit or loss for the Per Share         period attributable to the equity shareholders divided by the weighted average number  of the  equity shares outstanding  during  the  period.
+For  details  refer  to accounting standard 20 (AS 20).
+83   Beta Factor       Beta serves as a proxy for the industry-wide relationship between the operational risk loss experience for a given business line and the aggregate level of gross income for that business line.
+
+##### 7. MD_kcc_2026::0026
+file: MD_kcc_2026.pdf | pages 10-10 | clause: 30 | words: 73 | table_flag: False
+heading: Chapter III: General Instructions
+
+30. In case of loans to sharecroppers and oral lessees, banks shall accept certificates provided by local administration / panchayati raj institutions regarding the cultivation of crops by such borrowers. Where there are  difficulties  in getting  certification regarding identity and occupational status of sharecroppers and oral lessees, banks shall accept an affidavit submitted by such borrowers giving their occupational status (i.e., details of land tilled / crops grown), for loans up to ₹50,000.
+
+##### 8. CIR_goldmonetization_2015::0026
+file: CIR_goldmonetization_2015.pdf | pages 17-18 | clause: 2.9, 2.9.1 | words: 205 | table_flag: False
+heading: CPTC/GMCTA:
+
+2.9 Utilization of gold mobilized under GMS
+2.9.1 Gold accepted under STBD 29 Inserted vide Circular DBR.IBD.BC.74/23.67.001/2015-16 dated January 21, 2016 Without prejudice to the generality of the uses of the gold mobilised under the STBD, the designated banks may i.    sell the gold to MMTC for minting India Gold Coins (IGC), to jewellers and to other designated banks participating in GMS; or ii.   lend the gold under the GML scheme to MMTC for minting India Gold Coins (IGC) and to jewellers. iii. Lend the gold to other designated banks participating in the Scheme for granting GML subject to following conditions:
+(a)  Interest Rate: The interest rate to be charged on interbank lending of gold mobilised from these deposits shall be decided by banks.
+(b) Repayment: The repayment shall be in INR or in locally sourced IGDS/ LGDS (LBMA’s Good Delivery Standards) gold as agreed by the participating banks.
+(c)         Tenor: As the purpose for interbank lending is to provide gold to jewellery manufacturers/ jewellery exporters under GML, the tenor of interbank lending of gold shall be as per our circular DBOD.No.IBD.BC.71/23.67.001/2006-07 dated April 3, 2007, the Foreign Trade Policy and the Handbook of Procedures issued by DGFT, as amended from time to time. 30
+
+##### 9. MD_psl_2025::0070
+file: MD_psl_2025.pdf | pages 41-43 | clause: 26, 27, 28, 29 | words: 341 | table_flag: False
+heading: CHAPTER IV MISCELLANEOUS
+
+29. Production of food grade packaging material such as laminates, tetra packs, bottles, tin containers etc. Annex – IIIA Priority Sector Lending Certificates - Scheme i) Purpose: To enable banks to achieve the priority sector lending target and sub- targets by purchase of these instruments in the event of shortfall and at the same time incentivize the surplus banks; thereby enhancing lending to the categories under priority sector. ii) Nature of the Instruments: The seller will be selling fulfilment of priority sector obligation and the buyer would be buying the same. There will be no transfer of risks or loan assets. iii) Modalities: The PSLCs will be traded through the CBS portal (e-Kuber) of RBI. The detailed operational instructions for carrying out the trades are available through the e-Kuber portal. iv) Sellers/Buyers: Scheduled Commercial Banks (SCBs), Regional Rural Banks (RRBs), Local Area Banks (LABs), Small Finance Banks (SFBs) and Urban Co- operative Banks (UCBs) who have originated PSL eligible category loans subject to such regulations as may be issued by the Bank. v) Types of PSLCs: There would be four kinds of PSLCs :– i) PSLC Agriculture: Counting for achievement towards the total agriculture lending target. ii) PSLC SF/MF: Counting for achievement towards the sub-target for lending to Small and Marginal Farmers. iii) PSLC Micro Enterprises: Counting for achievement towards the sub target for lending to Micro Enterprises. iv) PSLC General: Counting for achievement towards the overall priority sector target. As stated in the Master Directions - Reserve Bank of India (Priority Sector Lending – Targets and Classification) Directions, 2025, Priority Sector comprises several categories, including Agriculture and Micro Enterprises. In addition to the overall target and sectoral targets for lending to agriculture and micro enterprises, banks are required to achieve specified sub-target for lending to Small and Marginal Farmers.  Accordingly,  to  avoid  computational  issues  in  assessing  the achievement/shortfall of PSL targets,  it is advised that the above four types of certificates will represent specific loans and count for specific sub-targets/targets as indicated hereunder: S.No.  Type of PSLCs      Representing         Counting for
+
+##### 10. MD_creditreporting_2025::0063
+file: MD_creditreporting_2025.pdf | pages 30-55 | clause: - | words: 342 | table_flag: False
+heading: •     CKYC
+
+#        Field Name       Type    Length    Option                Description 64   Segment Identifier    A/N      6        Required   Must contain the value ‘ACTCRD’ to identify the Account Segment.
+65   Unique Account      A/N      35       Required    This  field  will not change even  if the Reference number                                 Account number changes,  it can have customer ID.
+This field must be consistent on each submission basis to avoid duplication of information.
+In case of a branch split or branch join where  the  account number changes within the tenor of the loan, the original loan account number should be shown here.
+66   Account Number     A/N      35       Required   Account number of the loan account.
+Will be same as previous field  if no split or branch combination has happened during the tenor of the loan.
+67   Branch Identifier      A/N      30       Required   Unique branch code where the loan when       account is held currently.
+present     Could be left blank if not available 68    Kendra/Centre       A/N      30       Required   Unique  center code where  the  loan Identifier                           when       account is held currently present     Could be left blank if not available 69   Loan Officer         A/N      30       Required   Employee Code of Officer originating the loan          originating the                       when Could be left blank if not available loan                                      present 70   Date of Account     D       8        Required   Date on which Account was last updated.
+Information                                                                   Valid  calendar  date  in DDMMYYYY format 71   Loan Category5      A/N      3        Required   Enumeration:
+T01- JLG Group T02- JLG Individual T03 – Individual T04 - SHG Group T05 - SHG Individual T06 - SHG Group - Govt 5 JLG-Individual:
+JLG loan where lending is being tracked at individual level;
+JLG-Group:
+JLG loan where lending is being tracked at group level;
+Individual:
+Individual Microfinance loan (not JLG or SHG) – this loan should either be reported in this format or in the consumer data format but not in both formats;
+SHG Individual:
+where the amount of lending is being tracked at individual level;
+SHG – Group:
+where the lent amount is being tracked at Group level only;
+SHG Group Govt:
+same as SHG Group but linked to a Government program;
+SHG-Group- Intra:
+

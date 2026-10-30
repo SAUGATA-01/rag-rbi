@@ -29,7 +29,9 @@ CLAUSE_START = re.compile(r"^(?:(\d{1,3}(?:\.\d{1,3})+)\.?|(\d{1,3})\.)\s+(?=[A-
 # sub-clause: "(a) text", "(ii) text", "(3) text"
 SUBCLAUSE = re.compile(r"^\((?:[a-z]{1,3}|[ivx]{1,5}|\d{1,2})\)\s+\S")
 HEADING_KW = re.compile(
-    r"^(?:chapter|annex(?:ure)?|appendix|part|schedule)\s+(?:[ivxlc]+|\d{1,2}|[a-z])\b.{0,90}$", re.I
+    r"^(?:chapter|annex(?:ure)?|appendix|part|schedule)\s*"
+    r"(?:[-\u2013\u2014]\s*|\s+)"
+    r"(?:[ivxlc]+|\d{1,2}|[a-z](?:\s+[a-z])?)\b.{0,90}$", re.I
 )
 
 

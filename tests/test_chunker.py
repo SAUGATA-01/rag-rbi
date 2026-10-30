@@ -68,5 +68,25 @@ class ChunkerTests(unittest.TestCase):
         self.assertEqual([c["heading"] for c in ch], ["Chapter I \u2013 A", "Chapter II \u2013 B"])
 
 
+    def test_dashed_annex_headings_stay_separate(self):
+        page = (
+            "Annex - I A\n"
+            "List of Districts with comparatively high PSL credit\n"
+            "District Alpha District Beta District Gamma District Delta\n"
+            "Annex \u2013 I B\n"
+            "List of Districts with comparatively low PSL credit\n"
+            "District Epsilon District Zeta District Eta District Theta\n"
+            "Annex \u2013 II\n"
+            "Indicative list of eligible activities under Agriculture Infrastructure"
+        )
+        ch = chunk_pages([page], "annex_test", cfg=ChunkConfig(min_words=2, max_words=50))
+        self.assertEqual([c["heading"] for c in ch], ["Annex - I A", "Annex \u2013 I B", "Annex \u2013 II"])
+        self.assertIn("high PSL credit", ch[0]["text"])
+        self.assertNotIn("low PSL credit", ch[0]["text"])
+        self.assertIn("low PSL credit", ch[1]["text"])
+        self.assertNotIn("high PSL credit", ch[1]["text"])
+
+
+
 if __name__ == "__main__":
     unittest.main()
