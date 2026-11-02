@@ -1,0 +1,17 @@
+{
+  "n_questions": 60,
+  "by_category": {
+    "simple": 15,
+    "outdated_trap": 12,
+    "what_changed": 9,
+    "multihop": 12,
+    "unanswerable": 12
+  },
+  "graph_only": 6,
+  "self_authored": 45,
+  "by_split": {
+    "dev": 60
+  },
+  "golden_sha": "c2c4e0826b14",
+  "validated_against_corpus_sha": "c6be8a2ed75e"
+}

@@ -41,3 +41,11 @@ Old+new pairs in corpus: 3; amendments with base in corpus: 4.
 Ingestion errors: 0. Repeat ingestion: 50 cache hits, 0 new/rechunked documents.
 
 Flagged for review: 14 (see eval/results/step5_ingest_report.csv). Detailed quality review deferred.
+
+## Step 6: Golden dataset (dev split)
+
+60 questions: simple 15, multihop 12 (6 graph-only), outdated_trap 12, what_changed 9, unanswerable 12.
+
+Gold evidence = (file, page, quote), auto-verified against PDF text. 15 simple questions LLM-assisted drafts, all human-verified; 45 written entirely by me. Held-out test split (40 questions) will be added later and not used for tuning.
+
+golden_sha=c2c4e0826b14, corpus_sha=c6be8a2ed75e.

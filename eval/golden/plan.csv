@@ -1,0 +1,61 @@
+slot_id,category,graph_only,subtype,target_files,target_page,packet,hint
+P01,simple,,,CIR_kyc_2024.pdf,1,yes,CIR_kyc_2024.pdf page 1 se ek tathya-wala sawal
+P02,simple,,,MD_creditrisk_2026.pdf,11,yes,MD_creditrisk_2026.pdf page 11 se ek tathya-wala sawal
+P03,simple,,,CIR_creditinformationreporting_2025.pdf,8,yes,CIR_creditinformationreporting_2025.pdf page 8 se ek tathya-wala sawal
+P04,simple,,,CIR_crr_2024.pdf,2,yes,CIR_crr_2024.pdf page 2 se ek tathya-wala sawal
+P05,simple,,,AMD_kyc_2025.pdf,1,yes,AMD_kyc_2025.pdf page 1 se ek tathya-wala sawal
+P06,simple,,,MD_ppi_2026.pdf,14,yes,MD_ppi_2026.pdf page 14 se ek tathya-wala sawal
+P07,simple,,,AMD_responsiblebusinessconduct_2026.pdf,1,yes,AMD_responsiblebusinessconduct_2026.pdf page 1 se ek tathya-wala sawal
+P08,simple,,,CIR_crr_2025.pdf,1,yes,CIR_crr_2025.pdf page 1 se ek tathya-wala sawal
+P09,simple,,,MD_paymentaggregator_2025.pdf,21,yes,MD_paymentaggregator_2025.pdf page 21 se ek tathya-wala sawal
+P10,simple,,,CIR_registration_factors_2022.pdf,2,yes,CIR_registration_factors_2022.pdf page 2 se ek tathya-wala sawal
+P11,simple,,,MD_digitalpaymentsecurity_2026.pdf,16,yes,MD_digitalpaymentsecurity_2026.pdf page 16 se ek tathya-wala sawal
+P12,simple,,,MD_marketriskcapital_2026.pdf,48,yes,MD_marketriskcapital_2026.pdf page 48 se ek tathya-wala sawal
+P13,simple,,,MD_creditderiv_2026.pdf,9,yes,MD_creditderiv_2026.pdf page 9 se ek tathya-wala sawal
+P14,simple,,,AMD_financialstatements_2026.pdf,1,yes,AMD_financialstatements_2026.pdf page 1 se ek tathya-wala sawal
+P15,simple,,,AMD_capitaladequacy_2025.pdf,1,yes,AMD_capitaladequacy_2025.pdf page 1 se ek tathya-wala sawal
+P16,outdated_trap,,,MD_creditderiv_2026.pdf;MD_creditderiv_2022.pdf,,no,"naya=MD_creditderiv_2026.pdf, purana=MD_creditderiv_2022.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P17,outdated_trap,,,MD_psl_2025.pdf;MD_psl_2020.pdf,,no,"naya=MD_psl_2025.pdf, purana=MD_psl_2020.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P18,outdated_trap,,,AMD_creditfacilities_2026.pdf;CIR_creditfacilities_2026.pdf,,no,"naya=AMD_creditfacilities_2026.pdf, purana=CIR_creditfacilities_2026.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P19,outdated_trap,,,MD_creditderiv_2026.pdf;MD_creditderiv_2022.pdf,,no,"naya=MD_creditderiv_2026.pdf, purana=MD_creditderiv_2022.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P20,outdated_trap,,,MD_psl_2025.pdf;MD_psl_2020.pdf,,no,"naya=MD_psl_2025.pdf, purana=MD_psl_2020.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P21,outdated_trap,,,AMD_creditfacilities_2026.pdf;CIR_creditfacilities_2026.pdf,,no,"naya=AMD_creditfacilities_2026.pdf, purana=CIR_creditfacilities_2026.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P22,outdated_trap,,,MD_creditderiv_2026.pdf;MD_creditderiv_2022.pdf,,no,"naya=MD_creditderiv_2026.pdf, purana=MD_creditderiv_2022.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P23,outdated_trap,,,MD_psl_2025.pdf;MD_psl_2020.pdf,,no,"naya=MD_psl_2025.pdf, purana=MD_psl_2020.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P24,outdated_trap,,,AMD_creditfacilities_2026.pdf;CIR_creditfacilities_2026.pdf,,no,"naya=AMD_creditfacilities_2026.pdf, purana=CIR_creditfacilities_2026.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P25,outdated_trap,,,MD_creditderiv_2026.pdf;MD_creditderiv_2022.pdf,,no,"naya=MD_creditderiv_2026.pdf, purana=MD_creditderiv_2022.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P26,outdated_trap,,,MD_psl_2025.pdf;MD_psl_2020.pdf,,no,"naya=MD_psl_2025.pdf, purana=MD_psl_2020.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P27,outdated_trap,,,AMD_creditfacilities_2026.pdf;CIR_creditfacilities_2026.pdf,,no,"naya=AMD_creditfacilities_2026.pdf, purana=CIR_creditfacilities_2026.pdf: aisa provision dhoondo jo badla ho (diff subcommand). Slot repeat ho to alag provision lo"
+P28,what_changed,,,AMD_depositrates_2026.pdf;MD_depositrates_2025.pdf,,no,AMD_depositrates_2026.pdf ne MD_depositrates_2025.pdf mein kya badla (amends)
+P29,what_changed,,,AMD_ird_2026.pdf;MD_depositrates_2025.pdf,,no,AMD_ird_2026.pdf ne MD_depositrates_2025.pdf mein kya badla (amends)
+P30,what_changed,,,CIR_goldmonetization_2025.pdf;CIR_goldmonetization_2015.pdf,,no,CIR_goldmonetization_2025.pdf ne CIR_goldmonetization_2015.pdf mein kya badla (amends)
+P31,what_changed,,,AMD_creditrisk_2026.pdf;MD_creditrisk_2025.pdf,,no,AMD_creditrisk_2026.pdf ne MD_creditrisk_2025.pdf mein kya badla (amends)
+P32,what_changed,,,MD_creditderiv_2026.pdf;MD_creditderiv_2022.pdf,,no,MD_creditderiv_2026.pdf ne MD_creditderiv_2022.pdf mein kya badla (supersedes)
+P33,what_changed,,,MD_psl_2025.pdf;MD_psl_2020.pdf,,no,MD_psl_2025.pdf ne MD_psl_2020.pdf mein kya badla (supersedes)
+P34,what_changed,,,AMD_creditfacilities_2026.pdf;CIR_creditfacilities_2026.pdf,,no,AMD_creditfacilities_2026.pdf ne CIR_creditfacilities_2026.pdf mein kya badla (supersedes)
+P35,what_changed,,,AMD_depositrates_2026.pdf;MD_depositrates_2025.pdf,,no,AMD_depositrates_2026.pdf ne MD_depositrates_2025.pdf mein kya badla (amends)
+P36,what_changed,,,AMD_ird_2026.pdf;MD_depositrates_2025.pdf,,no,AMD_ird_2026.pdf ne MD_depositrates_2025.pdf mein kya badla (amends)
+P37,multihop,yes,,CIR_creditfacilities_2026.pdf,,no,graph-only [current_version] doc=CIR_creditfacilities_2026.pdf; sahi jawab = AMD_creditfacilities_2026.pdf
+P38,multihop,yes,,CIR_goldmonetization_2015.pdf,,no,graph-only [amendment_trail] doc=CIR_goldmonetization_2015.pdf; sahi jawab = CIR_goldmonetization_2025.pdf
+P39,multihop,yes,,CIR_creditfacilities_2026.pdf,,no,graph-only [status] doc=CIR_creditfacilities_2026.pdf; sahi jawab = superseded
+P40,multihop,yes,,MD_creditderiv_2022.pdf,,no,graph-only [current_version] doc=MD_creditderiv_2022.pdf; sahi jawab = MD_creditderiv_2026.pdf
+P41,multihop,yes,,MD_creditrisk_2025.pdf,,no,graph-only [amendment_trail] doc=MD_creditrisk_2025.pdf; sahi jawab = AMD_creditrisk_2026.pdf
+P42,multihop,yes,,MD_creditderiv_2022.pdf,,no,graph-only [status] doc=MD_creditderiv_2022.pdf; sahi jawab = superseded
+P43,multihop,no,,,,no,"do alag active documents jo ek hi topic par hon (probe use karo), jawab dono ko jod ke bane"
+P44,multihop,no,,,,no,"do alag active documents jo ek hi topic par hon (probe use karo), jawab dono ko jod ke bane"
+P45,multihop,no,,,,no,"do alag active documents jo ek hi topic par hon (probe use karo), jawab dono ko jod ke bane"
+P46,multihop,no,,,,no,"do alag active documents jo ek hi topic par hon (probe use karo), jawab dono ko jod ke bane"
+P47,multihop,no,,,,no,"do alag active documents jo ek hi topic par hon (probe use karo), jawab dono ko jod ke bane"
+P48,multihop,no,,,,no,"do alag active documents jo ek hi topic par hon (probe use karo), jawab dono ko jod ke bane"
+P49,unanswerable,,out_of_scope,,,no,"RBI se bahar ka topic (jaise stock market, GST, kisi aur desh ka niyam)"
+P50,unanswerable,,out_of_scope,,,no,"RBI se bahar ka topic (jaise stock market, GST, kisi aur desh ka niyam)"
+P51,unanswerable,,out_of_scope,,,no,"RBI se bahar ka topic (jaise stock market, GST, kisi aur desh ka niyam)"
+P52,unanswerable,,out_of_scope,,,no,"RBI se bahar ka topic (jaise stock market, GST, kisi aur desh ka niyam)"
+P53,unanswerable,,near_miss,,,no,RBI ka topic jo tumhare corpus mein NAHI hai (probe se confirm karo)
+P54,unanswerable,,near_miss,,,no,RBI ka topic jo tumhare corpus mein NAHI hai (probe se confirm karo)
+P55,unanswerable,,near_miss,,,no,RBI ka topic jo tumhare corpus mein NAHI hai (probe se confirm karo)
+P56,unanswerable,,near_miss,,,no,RBI ka topic jo tumhare corpus mein NAHI hai (probe se confirm karo)
+P57,unanswerable,,near_miss,,,no,RBI ka topic jo tumhare corpus mein NAHI hai (probe se confirm karo)
+P58,unanswerable,,false_premise,,,no,maujood document ke ek aise clause/paragraph ke baare mein poochho jo exist nahi karta
+P59,unanswerable,,false_premise,,,no,maujood document ke ek aise clause/paragraph ke baare mein poochho jo exist nahi karta
+P60,unanswerable,,false_premise,,,no,maujood document ke ek aise clause/paragraph ke baare mein poochho jo exist nahi karta

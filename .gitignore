@@ -7,3 +7,4 @@ __pycache__/
 data/raw_pdfs/
 data/processed/
 data/cache/
+eval/golden/drafts.jsonl
