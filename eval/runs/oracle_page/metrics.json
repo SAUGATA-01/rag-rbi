@@ -1,0 +1,168 @@
+{
+  "run": "oracle_page",
+  "retriever": "oracle_page",
+  "k": 20,
+  "split": "dev",
+  "n_questions": 60,
+  "corpus_sha": "c6be8a2ed75e",
+  "golden_sha": "c2c4e0826b14",
+  "created_utc": "2026-11-05T06:47:32+00:00",
+  "metrics": {
+    "groups": {
+      "answerable": {
+        "n": 48,
+        "recall@1": 0.78125,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.1875,
+        "mrr_quote@20": 0.22916666666666666,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.1875
+      },
+      "simple": {
+        "n": 15,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.26666666666666666,
+        "mrr_quote@20": 0.26666666666666666,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.0
+      },
+      "multihop": {
+        "n": 12,
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.20833333333333334,
+        "mrr_quote@20": 0.375,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.3333333333333333
+      },
+      "outdated_trap": {
+        "n": 12,
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.08333333333333333,
+        "mrr_quote@20": 0.08333333333333333,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.0
+      },
+      "what_changed": {
+        "n": 9,
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.16666666666666666,
+        "mrr_quote@20": 0.16666666666666666,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.5555555555555556
+      },
+      "multihop_graph_only": {
+        "n": 6,
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.25,
+        "mrr_quote@20": 0.4166666666666667,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.6666666666666666
+      },
+      "multihop_text": {
+        "n": 6,
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "recall@20": 1.0,
+        "success_all@5": 1.0,
+        "mrr@20": 1.0,
+        "recall_quote@5": 0.16666666666666666,
+        "mrr_quote@20": 0.3333333333333333,
+        "recall@5_ci": [
+          1.0,
+          1.0
+        ],
+        "mrr@20_ci": [
+          1.0,
+          1.0
+        ],
+        "superseded_in_top5": 0.0
+      }
+    },
+    "abstain_auc": 1.0,
+    "n_unanswerable": 12,
+    "outdated": {
+      "n": 12,
+      "outdated_first_rate": 0.0,
+      "trap_in_top5": 0.0
+    }
+  }
+}

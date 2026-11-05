@@ -49,3 +49,18 @@ Flagged for review: 14 (see eval/results/step5_ingest_report.csv). Detailed qual
 Gold evidence = (file, page, quote), auto-verified against PDF text. 15 simple questions LLM-assisted drafts, all human-verified; 45 written entirely by me. Held-out test split (40 questions) will be added later and not used for tuning.
 
 golden_sha=c2c4e0826b14, corpus_sha=c6be8a2ed75e.
+
+## Step 7: Retrieval eval harness
+
+Gold evidence: `(file, page, quote)`. Page-hit is the primary metric; quote-hit is strict. Evaluation includes 95% bootstrap confidence intervals and paired comparisons between runs.
+
+| Run | R@5 | MRR@20 | quoteR@5 | Superseded in top-5 | Abstain AUC |
+|---|---:|---:|---:|---:|---:|
+| random | 2.1% | 0.01 | 0.0% | — | 0.500 |
+| idf_overlap (throwaway lexical baseline) | 72.9% | 0.67 | 62.5% | 29.2% | 0.877 |
+| oracle_page (ceiling, cheating) | 100.0% | 1.00 | 18.8% | — | 1.000 |
+
+n = 48 answerable dev questions. Differences under ~3 percentage points are noise at this sample size.
+
+95% bootstrap CIs are reported by the evaluation harness; the table above shows the observed metric values.
+
