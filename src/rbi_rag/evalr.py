@@ -146,7 +146,7 @@ def aggregate(per_q):
     unans = [q["top1_score"] for q in per_q if q["category"] == "unanswerable"]
     out["abstain_auc"] = auc(ans, unans)
     out["n_unanswerable"] = len(unans)
-    traps = [q for q in per_q if q["category"] == "outdated_trap"]
+    traps = [q for q in per_q if q["category"] == "outdated_trap" and q["outdated_first"] is not None]
     out["outdated"] = {
         "n": len(traps),
         "outdated_first_rate": mean(float(q["outdated_first"]) for q in traps),

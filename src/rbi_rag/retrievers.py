@@ -7,9 +7,12 @@ from __future__ import annotations
 import random
 from collections import defaultdict
 
+from rbi_rag.bm25 import BM25
 from rbi_rag.evalr import page_hit
 from rbi_rag.golden import build_probe
 from rbi_rag.relations import norm
+from rbi_rag.textproc import tokenize
+from rbi_rag.vector import EmbeddingCache, HashEmbedder, STEmbedder, VectorIndex
 
 
 class RandomRetriever:
@@ -60,11 +63,45 @@ class IdfOverlapRetriever:
         return [dict(c, score=s) for s, c in self.search(query, k)]
 
 
+class BM25Retriever:
+    """BM25 scratch se (numpy). field = 'embed_text' (title|heading|clause + text) ya 'text'."""
+
+    def __init__(self, chunks, golden=None, field="embed_text", use_stem=True, k1=1.5, b=0.75, name="bm25"):
+        self.name, self.chunks, self.use_stem = name, chunks, use_stem
+        self.bm = BM25([tokenize(c[field], use_stem=use_stem) for c in chunks], k1=k1, b=b)
+
+    def retrieve(self, query, k, qid=None):
+        return [dict(self.chunks[i], score=s) for i, s in self.bm.top(tokenize(query, use_stem=self.use_stem), k)]
+
+
+class VectorRetriever:
+    """Naive dense retrieval: har chunk ka embed_text embed, query ke saath cosine. Embeddings disk par cache."""
+
+    def __init__(self, chunks, golden=None, embedder=None, cache_root="data/cache/embeddings", name="vector"):
+        self.name, self.chunks = name, chunks
+        self.embedder = embedder or STEmbedder()
+        cache = EmbeddingCache(cache_root, self.embedder.name)
+        mat, self.stats = cache.get_matrix([c["embed_text"] for c in chunks], self.embedder)
+        self.index = VectorIndex(mat)
+
+    def retrieve(self, query, k, qid=None):
+        q = self.embedder.encode_queries([query])[0]
+        return [dict(self.chunks[i], score=s) for i, s in self.index.top(q, k)]
+
+
 REGISTRY = {
     "random": lambda chunks, golden: RandomRetriever(chunks, golden),
     "oracle_page": lambda chunks, golden: OracleRetriever(chunks, golden, "page"),
     "oracle_quote": lambda chunks, golden: OracleRetriever(chunks, golden, "quote"),
     "idf_overlap": lambda chunks, golden: IdfOverlapRetriever(chunks, golden),
+    "bm25": lambda chunks, golden: BM25Retriever(chunks, golden, name="bm25"),
+    "bm25_text": lambda chunks, golden: BM25Retriever(chunks, golden, field="text", name="bm25_text"),
+    "bm25_nostem": lambda chunks, golden: BM25Retriever(chunks, golden, use_stem=False, name="bm25_nostem"),
+    "vector_bge_small": lambda chunks, golden: VectorRetriever(chunks, golden, STEmbedder(), name="vector_bge_small"),
+    "vector_bge_small_noprefix": lambda chunks, golden: VectorRetriever(
+        chunks, golden, STEmbedder(query_prefix=""), name="vector_bge_small_noprefix"),
+    "vector_hash": lambda chunks, golden: VectorRetriever(
+        chunks, golden, HashEmbedder(), cache_root="data/cache/embeddings_debug", name="vector_hash"),
 }
 
 

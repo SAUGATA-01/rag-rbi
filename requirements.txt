@@ -1,2 +1,4 @@
 pymupdf
 pdfplumber
+numpy
+sentence-transformers

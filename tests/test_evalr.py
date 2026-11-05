@@ -109,6 +109,14 @@ class EvalTests(unittest.TestCase):
         self.assertEqual(ag["groups"]["answerable"]["n"], 2)
         self.assertEqual(ag["outdated"]["n"], 1)
 
+    def test_aggregate_skips_outdated_without_trap(self):
+        idx = ChunkIndex(CHUNKS)
+        g = dict(GOLD[0], trap=None)            # outdated_trap par trap nahi: crash nahi hona chahiye
+        per_q = [score_question(g, [dict(CHUNKS[0], score=1.0)], idx)]
+        ag = aggregate(per_q)
+        self.assertEqual(ag["outdated"]["n"], 0)
+        self.assertIsNone(ag["outdated"]["outdated_first_rate"])
+
     def test_paired(self):
         p = paired([0.0, 0.0, 1.0, 0.5], [1.0, 0.5, 1.0, 0.0])
         self.assertEqual((p["wins"], p["losses"], p["ties"]), (2, 1, 1))
