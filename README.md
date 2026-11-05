@@ -64,3 +64,19 @@ n = 48 answerable dev questions. Differences under ~3 percentage points are nois
 
 95% bootstrap CIs are reported by the evaluation harness; the table above shows the observed metric values.
 
+## Step 8: BM25 (from scratch) and naive dense retrieval (first ablation rows)
+
+n = 48 answerable dev questions; 95% bootstrap CI; differences under ~3 percentage points are noise.
+
+| Variant | R@5 [95% CI] | MRR@20 | quoteR@5 | Superseded in top-5 |
+|---|---:|---:|---:|---:|
+| idf_overlap (throwaway) | 72.9% | 0.67 | 62.5% | 29.2% |
+| BM25 (title+heading context, stemmed) | 87.5% [81.2, 93.8] | 0.88 | 75.0% | 37.5% |
+| BM25 text-only | 79.2% [69.8, 87.5] | 0.75 | 67.7% | 37.5% |
+| BM25 no stemming | 84.4% [77.1, 91.7] | 0.81 | 68.8% | 39.6% |
+| Dense bge-small (naive vector-only baseline) | 80.2% [70.8, 89.6] | 0.74 | 60.4% | 47.9% |
+| Dense bge-small, no query prefix | 80.2% [68.8, 89.6] | 0.76 | 60.4% | 45.8% |
+
+Embeddings are cached by SHA1 of passage text; only changed chunks are re-embedded.
+
+Paired comparison: BM25 improved over IDF overlap on answerable R@5 (+14.6 percentage points; 95% CI [+5.2, +26.0]). BM25 and dense bge-small showed no clear difference in R@5; BM25 had higher MRR@20 and quoteR@5 in the paired comparison.
